@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bluff"
+version = "0.1.0"
+description = "Liar's Dice game simulation with AI agents and RL training"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "gymnasium",
+    "pettingzoo",
+    "scipy",
+    "streamlit",
+]
+
+[project.optional-dependencies]
+rl = [
+    "torch",
+]
+
+[tool.setuptools.packages.find]
+include = ["bluff*"]
