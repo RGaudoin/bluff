@@ -1,5 +1,7 @@
 # Bluff (Liar's Dice)
 
+[![Licence: Apache 2.0](https://img.shields.io/badge/Licence-Apache_2.0-blue.svg)](LICENCE)
+
 A simulation of the strategic imperfect-information game **Bluff** (also known as Liar's Dice), with AI agents and a Streamlit web app for interactive play.
 
 ## Features

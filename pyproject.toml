@@ -6,6 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "bluff"
 version = "0.1.0"
 description = "Liar's Dice game simulation with AI agents and RL training"
+license = {text = "Apache-2.0"}
 requires-python = ">=3.10"
 dependencies = [
     "numpy",
