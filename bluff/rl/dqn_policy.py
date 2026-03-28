@@ -219,7 +219,7 @@ class DQNPolicy(EnvPolicy):
 
     def load(self, path: str) -> None:
         """Load model weights."""
-        checkpoint = torch.load(path, map_location=self.device, weights_only=False)
+        checkpoint = torch.load(path, map_location=self.device, weights_only=True)
         self.q_network.load_state_dict(checkpoint["q_network"])
         self.target_network.load_state_dict(checkpoint["target_network"])
 
@@ -227,7 +227,7 @@ class DQNPolicy(EnvPolicy):
     def load_metadata(path: str) -> Optional[Dict[str, Any]]:
         """Load just the metadata from a checkpoint without loading weights."""
         try:
-            checkpoint = torch.load(path, map_location="cpu", weights_only=False)
+            checkpoint = torch.load(path, map_location="cpu", weights_only=True)
             return checkpoint.get("metadata")
         except Exception:
             return None
